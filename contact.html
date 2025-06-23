@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SIMAT Telecom</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        nav {
+            background: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .contact-info, .contact-form {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        h2 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #0056b3;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .submit-btn {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #003366;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Contact SIMAT Telecom</h1>
+        <p>We're here to help you 24/7</p>
+    </header>
+
+    <nav>
+        <a href="file:///C:/Users/risha/project/project/project/home.html">Home</a>
+        <a href="file:///C:/Users/risha/project/project/project/plans.html">Plans</a>
+        <a href="file:///C:/Users/risha/project/project/project/about.html">About</a>
+        <a href="file:///C:/Users/risha/project/project/project/contact.html">Contact</a>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Our Contact Details</h2>
+            
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Head Office</h3>
+                    <p>Scms college of engineering,palissery</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3>Call Us</h3>
+                    <p>Toll-Free: 1800-123-4567</p>
+                    <p>Customer Care: +91 7559068840</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email Us</h3>
+                    <p>support@simat.com</p>
+                    <p>business@simat.com</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3>Working Hours</h3>
+                    <p>Monday-Saturday: 8AM to 10PM</p>
+                    <p>Sunday: 10AM to 6PM</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                
+                <input type="email" placeholder="Your Email" required>
+                
+                <input type="tel" placeholder="Your Phone Number">
+                
+                <select required>
+                    <option value="">Select Department</option>
+                    <option>New Connection</option>
+                    <option>Plan Upgrade</option>
+                    <option>Billing Support</option>
+            
+                    <option>Other</option>
+                </select>
+                
+                <textarea placeholder="Your Message" required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIMAT Telecom. All Rights Reserved.</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

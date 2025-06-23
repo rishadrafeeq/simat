@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMAT - Telecom Services</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #3626e6, #1d0278);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        nav {
+            background: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .offer-slider {
+            background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: slideIn 1s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            margin-bottom: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-box {
+            background: white;
+            border-radius: 10px;
+            width: 280px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .service-box img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        
+        .service-box button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .service-box button:hover {
+            background: #004080;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #333, #222);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .offer-text {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIMAT Telecom Services</h1>
+        <p>Choose the perfect partner for your needs</p>
+    </header>
+    
+    <nav>
+        <a href="file:///C:/Users/risha/project/project/project/home.html">Home</a>
+        <a href="file:///C:/Users/risha/project/project/project/plans.html">Plans</a>
+        <a href="file:///C:/Users/risha/project/project/project/about.html">About</a>
+        <a href="file:///C:/Users/risha/project/project/project/contact.html">Contact</a>
+    </nav>
+    
+    <div class="offer-slider">
+        <div class="offer-text">🔥 Special Offer: Get 50% off on first recharge! Limited time only. 🔥</div>
+    </div>
+    
+    <div class="container">
+        <div class="service-box">
+            <img src="https://logo.clearbit.com/myvi.in" alt="Vi">
+            <h2>Vi</h2>
+            <p>Unlimited calls + 2GB/day for ₹299/month</p>
+            <button onclick="window.location.href='file:///C:/Users/risha/project/project/project/bookingvi.html?service=Vi'">Select Plan</button>
+        </div>
+        
+        <div class="service-box">
+            <img src="https://logo.clearbit.com/jio.com" alt="Jio">
+            <h2>Jio</h2>
+            <p>1.5GB/day + free Netflix for ₹399/month</p>
+            <button onclick="window.location.href='file:///C:/Users/risha/project/project/project/bookingjio.html?service=Jio'">Select Plan</button>
+        </div>
+        
+        <div class="service-box">
+            <img src="https://logo.clearbit.com/airtel.in" alt="Airtel">
+            <h2>Airtel</h2>
+            <p>Unlimited 5G + Amazon Prime for ₹499/month</p>
+            <button onclick="window.location.href='file:///C:/Users/risha/project/project/project/bookingairtel.html?service=Airtel'">Select Plan</button>
+        </div>
+        
+        <div class="service-box">
+            <img src="https://logo.clearbit.com/bsnl.co.in" alt="BSNL">
+            <h2>BSNL</h2>
+            <p>Unlimited calls + 3GB/day for ₹349/month</p>
+            <button onclick="window.location.href='file:///C:/Users/risha/project/project/project/booking.html?service=BSNL'">Select Plan</button>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2024 SIMAT Telecom. All rights reserved. | Call us: 1800-123-4567
+    </footer>
+    
+    <script>
+        const offers = [
+            "🔥 Special Offer: Get 50% off on first recharge! Limited time only. 🔥",
+            "🎉 New: Free 1-month Netflix with Jio plans!",
+            "💡 Best Deal: Airtel 5G at 4G prices!",
+            "📢 BSNL: Unlimited calls at just ₹99/week!"
+        ];
+        
+        let currentOffer = 0;
+        const offerElement = document.querySelector('.offer-text');
+        
+        function rotateOffers() {
+            currentOffer = (currentOffer + 1) % offers.length;
+            offerElement.textContent = offers[currentOffer];
+            offerElement.style.animation = 'none';
+            void offerElement.offsetWidth; 
+            offerElement.style.animation = 'slideIn 1s ease-out';
+        }
+    
+        setInterval(rotateOffers, 5000);
+    </script>
+</body>
+</html>

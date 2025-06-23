@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMAT - Compare Plans</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        nav {
+            background: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .comparison-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #0056b3;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .highlight {
+            background: #e6f2ff;
+        }
+
+        .best-value {
+            background: #e1f5e1;
+            font-weight: bold;
+        }
+
+        .special-offer {
+            background: #fff3cd;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        .network-logo {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .offer-banner {
+            background: #ffc107;
+            color: #856404;
+            padding: 15px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .cta-button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #218838;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px 5px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIMAT Telecom</h1>
+        <p>Compare and choose the best plan</p>
+    </header>
+
+    <nav>
+        <a href="file:///C:/Users/risha/project/project/project/home.html">Home</a>
+        <a href="file:///C:/Users/risha/project/project/project/plans.html">Plans</a>
+        <a href="file:///C:/Users/risha/project/project/project/about.html">About</a>
+        <a href="file:///C:/Users/risha/project/project/project/contact.html">Contact</a>
+    </nav>
+    
+    <div class="offer-banner">
+        🎉 Special Offer! Port to SIMAT Telecom and get <strong>50% OFF</strong> on all plans for first month! 🎉
+        <div>
+            <a href="file:///C:/Users/risha/project/project/project/home.html" class="cta-button">Port My Number Now</a>
+        </div>
+    </div>
+
+    <div class="comparison-container">
+        <h2>Compare Mobile Plans</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>
+                        <img src="https://logo.clearbit.com/airtel.in" class="network-logo" alt="Airtel">
+                        Airtel
+                    </th>
+                    <th>
+                        <img src="https://logo.clearbit.com/jio.com" class="network-logo" alt="Jio">
+                        Jio
+                    </th>
+                    <th>
+                        <img src="https://logo.clearbit.com/vi.in" class="network-logo" alt="Vi">
+                        Vi
+                    </th>
+                    <th>
+                        <img src="https://logo.clearbit.com/bsnl.co.in" class="network-logo" alt="BSNL">
+                        BSNL
+                    </th>
+                    <th class="special-offer">
+                        <img src="https://via.placeholder.com/40/0056b3/ffffff?text=SM" class="network-logo" alt="SIMAT">
+                        SIMAT (Special Offer)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="highlight">
+                    <td><strong>₹299 Plan</strong></td>
+                    <td>1.5GB/day + UL calls</td>
+                    <td>1GB/day + UL calls</td>
+                    <td>1.25GB/day + UL calls</td>
+                    <td>1GB/day + UL calls</td>
+                    <td class="special-offer">1.5GB/day + UL calls<br><strong>Only ₹149.50 for first month</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>₹399 Plan</strong></td>
+                    <td>2.5GB/day + Hotstar</td>
+                    <td>2GB/day + Amazon Prime</td>
+                    <td>1.5GB/day + Zee5</td>
+                    <td>1.5GB/day + UL calls</td>
+                    <td class="special-offer">2.5GB/day + Disney+<br><strong>Only ₹199.50 for first month</strong></td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>₹499 Plan</strong></td>
+                    <td>3GB/day + Disney+</td>
+                    <td>3GB/day + Netflix</td>
+                    <td>2GB/day + Amazon Prime</td>
+                    <td>2GB/day + UL calls</td>
+                    <td class="special-offer">3GB/day + Netflix<br><strong>Only ₹249.50 for first month</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Daily Data</strong></td>
+                    <td>1.5GB-3GB</td>
+                    <td>1GB-3GB</td>
+                    <td>1.25GB-2GB</td>
+                    <td>1GB-2GB</td>
+                    <td class="special-offer">1.5GB-3GB</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>Validity</strong></td>
+                    <td>28 days</td>
+                    <td>28 days</td>
+                    <td>28 days</td>
+                    <td>28 days</td>
+                    <td class="special-offer">28 days</td>
+                </tr>
+                <tr>
+                    <td><strong>OTT Benefits</strong></td>
+                    <td>Hotstar, Disney+</td>
+                    <td>Netflix, Amazon Prime</td>
+                    <td>Zee5, Amazon Prime</td>
+                    <td>None</td>
+                    <td class="special-offer">Disney+, Netflix</td>
+                </tr>
+                <tr class="highlight">
+                    <td><strong>5G Availability</strong></td>
+                    <td>Yes</td>
+                    <td>Yes (Free)</td>
+                    <td>Limited</td>
+                    <td>No</td>
+                    <td class="special-offer">Yes (Free)</td>
+                </tr>
+                <tr>
+                    <td><strong>Porting Offer</strong></td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td>None</td>
+                    <td class="special-offer"><strong>50% OFF for first month!</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="offer-banner">
+        Limited time offer! Switch to SIMAT Telecom today and save 50% on your mobile plan for first month!
+        <div>
+            <a href="file:///C:/Users/risha/project/project/project/home.html" class="cta-button">Port My Number Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIMAT Telecom. All Rights Reserved.</p>
+        <p>📞 Call: 1800-123-456 | ✉️ Email: help@simat.com</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('tbody tr').forEach(row => {
+            row.addEventListener('click', function() {
+                this.classList.toggle('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

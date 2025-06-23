@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | SIMAT Telecom</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        nav {
+            background: #003366;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .booking-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .booking-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            margin: 15px 0;
+        }
+        .radio-option {
+            margin-bottom: 10px;
+        }
+        .time-options {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .time-slots, .custom-time {
+            flex: 1;
+        }
+        .time-slot {
+            padding: 8px;
+            margin-bottom: 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .time-slot.selected {
+            background: #0056b3;
+            color: white;
+        }
+        .submit-btn {
+            background: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #003366;
+        }
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .time-options {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book Telecom Service</h1>
+        <p>Schedule your appointment at your preferred location and time</p>
+    </header>
+
+    <nav>
+        <a href="file:///C:/Users/risha/project/project/project/home.html">Home</a>
+        <a href="file:///C:/Users/risha/project/project/project/plans.html">Plans</a>
+        <a href="#">About</a>
+        <a href="file:///C:/Users/risha/project/project/project/contact.html">Contact</a>
+    </nav>
+    
+
+    <div class="booking-container">
+        <div class="booking-card">
+            <h2>Service Details</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Select Service</label>
+                    <select id="service" required>
+                        <option value="">-- Select a service --</option>
+                        <option>New SIM Connection</option>
+                        <option>Port To</option>
+                        <option>Technical Support</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Appointment Location</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="locationType" id="storeLocation" checked>
+                            <label for="storeLocation">Select from our stores</label>
+                            <select id="store" class="location-select">
+                                <option value="">-- Choose a store --</option>
+                                <option>Angamaly</option>
+                                <option>Chalakudy</option>
+                                <option>Aluva</option>
+                                <option>Edappally</option>
+                            </select>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="locationType" id="customLocation">
+                            <label for="customLocation">Enter your address</label>
+                            <textarea id="customAddress" class="location-select hidden" placeholder="Enter your full address"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Appointment Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Appointment Time</label>
+                    <div class="time-options">
+                        <div class="time-slots">
+                            <p>Available Slots:</p>
+                            <div class="time-slot">9:00 AM - 10:00 AM</div>
+                            <div class="time-slot">11:00 AM - 12:00 PM</div>
+                            <div class="time-slot">2:00 PM - 3:00 PM</div>
+                            <div class="time-slot">4:00 PM - 5:00 PM</div>
+                        </div>
+                        <div class="custom-time">
+                            <p>Or suggest your time:</p>
+                            <input type="time" id="preferredTime" class="hidden">
+                            <button type="button" id="toggleTimeBtn">I need a different time</button>
+                        </div>
+                    </div>
+                    <input type="hidden" id="selected-time">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIMAT Telecom. All Rights Reserved.</p>
+        <p>Need immediate help? Call 1800-123-4567</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('input[name="locationType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.location-select').forEach(el => {
+                    el.classList.add('hidden');
+                });
+                if (this.id === 'storeLocation') {
+                    document.getElementById('store').classList.remove('hidden');
+                } else {
+                    document.getElementById('customAddress').classList.remove('hidden');
+                }
+            });
+        });
+
+        const toggleTimeBtn = document.getElementById('toggleTimeBtn');
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const preferredTime = document.getElementById('preferredTime');
+        
+        toggleTimeBtn.addEventListener('click', function() {
+            if (preferredTime.classList.contains('hidden')) {
+                preferredTime.classList.remove('hidden');
+                toggleTimeBtn.textContent = 'Select from available slots';
+                timeSlots.forEach(slot => slot.classList.remove('selected'));
+                document.getElementById('selected-time').value = '';
+            } else {
+                preferredTime.classList.add('hidden');
+                toggleTimeBtn.textContent = 'I need a different time';
+                document.getElementById('selected-time').value = '';
+            }
+        });
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', function() {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('selected-time').value = this.textContent;
+                preferredTime.classList.add('hidden');
+                toggleTimeBtn.textContent = 'I need a different time';
+            });
+        });
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+
+            let location;
+            if (document.getElementById('storeLocation').checked) {
+                location = document.getElementById('store').value;
+                if (!location) {
+                    alert('Please select a store location');
+                    return;
+                }
+            } else {
+                location = document.getElementById('customAddress').value;
+                if (!location.trim()) {
+                    alert('Please enter your address');
+                    return;
+                }
+            }
+            
+            let time = document.getElementById('selected-time').value;
+            if (!time && preferredTime.classList.contains('hidden')) {
+                alert('Please select a time slot');
+                return;
+            }
+            if (!time && !preferredTime.classList.contains('hidden')) {
+                time = preferredTime.value;
+                if (!time) {
+                    alert('Please enter your preferred time');
+                    return;
+                }
+                time = `Around ${time}`;
+            }
+
+            alert(`Appointment Booked!\n\nName: ${name}\nService: ${service}\nLocation: ${location}\nDate: ${date}\nTime: ${time}\n\nWe'll contact you to confirm.`);
+
+            this.reset();
+            timeSlots.forEach(slot => slot.classList.remove('selected'));
+            document.getElementById('selected-time').value = '';
+            preferredTime.classList.add('hidden');
+            toggleTimeBtn.textContent = 'I need a different time';
+            document.getElementById('store').classList.remove('hidden');
+            document.getElementById('customAddress').classList.add('hidden');
+            document.getElementById('storeLocation').checked = true;
+        });
+    </script>
+</body>
+</html>
